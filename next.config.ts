@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
+const isProduction = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
+  basePath: isProduction ? "/portfolio" : '',
   output: "export", // enables `next export` (static build)
   distDir: "out",   // output folder for GitHub Pages
   images: {

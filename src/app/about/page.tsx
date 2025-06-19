@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { getImagePath } from "@/lib/utils";
 
 export default function About() {
   return (
@@ -25,7 +26,7 @@ export default function About() {
           <div className="flex flex-col gap-4">
             <div className="w-64 h-64 relative rounded-lg overflow-hidden shadow-lg animate-slide-in-delay-200">
               <Image
-                src="/images/profile.jpg"
+                src={getImagePath("/images/profile.JPG")}
                 alt="Sofie Buur"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"

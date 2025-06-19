@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getImagePath } from '@/lib/utils';
 
 interface ProjectCardProps {
   title: string;
@@ -14,7 +15,7 @@ export default function ProjectCard({ title, image, url }: ProjectCardProps) {
       <div className="w-[800px] rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.01]">
         <div className="relative w-full h-[400px]">
           <Image
-            src={image}
+            src={getImagePath(image)}
             alt={title}
             fill
             className="object-cover"

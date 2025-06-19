@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { getImagePath } from "@/lib/utils";
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   const pathname = usePathname();
@@ -25,7 +26,7 @@ export default function Navigation() {
         <div className="rounded-full overflow-hidden w-[40px] h-[40px] bg-white">
           <Image
             className="rounded-full"
-            src="/images/logoBlack.png"
+            src={getImagePath("/images/logoBlack.png")}
             alt="profile"
             width={100}
             height={100}
