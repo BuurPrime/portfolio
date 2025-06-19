@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function Contact() {
   return (
     <div className="flex flex-col items-center mt-16">

@@ -8,7 +8,7 @@ interface ProjectCardProps {
   url: string;
 }
 
-export default function ProjectCard({ title, description, image, url }: ProjectCardProps) {
+export default function ProjectCard({ title, image, url }: ProjectCardProps) {
   return (
     <Link href={url} className="animate-slide-in-delay-100">
       <div className="w-[800px] rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.01]">
