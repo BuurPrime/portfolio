@@ -2,6 +2,7 @@
 
 import ProjectCard from "@/components/ProjectCard";
 import work from "@/lib/work";
+import Button from "@/components/Button";
 
 export default function Work() {
   return (
@@ -12,10 +13,13 @@ export default function Work() {
           <p className="text-lg text-gray-300 mb-12 text-center max-w-2xl mx-auto animate-slide-in-delay-50">
             Stuff I've worked on professionally.
           </p>
-          
+
           <div className="flex flex-col gap-12 items-center">
             {work.map((project, index) => (
-              <div key={project.title} className={`animate-slide-in-delay-${index * 100}`}>
+              <div
+                key={project.title}
+                className={`animate-slide-in-delay-${index * 100}`}
+              >
                 <ProjectCard
                   title={project.title}
                   description={project.description}
@@ -26,14 +30,16 @@ export default function Work() {
             ))}
           </div>
         </div>
-        
-        <div 
-          className="mt-16 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors animate-slide-in-delay-150"
-          onClick={() => window.scrollTo(0, 0)}
-        >
-          Back to the top
-        </div >
+
+        <div className="flex gap-4 my-10">
+          <Button
+            type="primary"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
+            Back to top
+          </Button>
+        </div>
       </main>
     </div>
   );
-} 
+}

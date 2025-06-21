@@ -1,0 +1,38 @@
+/* Animation keyframes */
+@keyframes slideInUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Animation utility classes */
+.animate-slide-in {
+    animation: slideInUp 0.4s ease forwards;
+    opacity: 0;
+  }
+  
+  .animate-slide-in-delay-50 {
+    animation: slideInUp 0.4s ease 0.05s forwards;
+    opacity: 0;
+  }
+  
+  .animate-slide-in-delay-100 {
+    animation: slideInUp 0.4s ease 0.1s forwards;
+    opacity: 0;
+  }
+  
+  .animate-slide-in-delay-150 {
+    animation: slideInUp 0.4s ease 0.15s forwards;
+    opacity: 0;
+  }
+  
+  .animate-slide-in-delay-200 {
+    animation: slideInUp 0.4s ease 0.20s forwards;
+    opacity: 0;
+  }
