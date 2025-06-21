@@ -4,14 +4,14 @@ const isProduction = process.env.NODE_ENV === "production";
 
 const nextConfig: NextConfig = {
   basePath: isProduction ? "/portfolio" : '',
-  output: "export", // enables `next export` (static build)
-  distDir: "out",   // output folder for GitHub Pages
+  output: "export", 
+  distDir: "out",
   images: {
-    unoptimized: true, // required if using `next/image` with static export
+    unoptimized: true,
   },
-  trailingSlash: true, // optional: improves routing for GitHub Pages
+  trailingSlash: true,
   eslint: {
-    ignoreDuringBuilds: true, // ⬅️ Add this line
+    ignoreDuringBuilds: true,
   },
 };
 
