@@ -18,7 +18,7 @@ const work = [
     description:
       "Create scenarios to plan for optimal future utilization of available water resources.",
     image: "/images/work/ViaShopping/ViaShopping_Thumbnail.png",
-    url: "/work/via-shopping",
+    url: "/work/viashopping",
   },
 ];
 

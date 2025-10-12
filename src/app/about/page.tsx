@@ -3,70 +3,220 @@ import { getImagePath } from "@/lib/utils";
 
 export default function About() {
   return (
-    <div className="flex flex-col items-center mt-16">
-      <main className="flex flex-col items-center gap-12 max-w-4xl px-4">
-        <h1 className="text-3xl font-bold animate-slide-in">About Me</h1>
+    <div className="min-h-screen">
+      <main>
+        <div className="container mx-auto px-6 py-16 max-w-6xl">
+          <h1 className="text-4xl font-bold animate-slide-in">About Me</h1>
 
-        <div className="flex flex-col md:flex-row items-center gap-12 animate-slide-in-delay-100">
-          <div className="max-w-xl">
-            <p className="mb-6 text-lg">
-              Hi, I'm Sofie, a frontend developer and UI/UX designer passionate about creating meaningful digital experiences.
-            </p>
-            <p className="mb-6">
-              What drives me is the intersection of creativity and problem-solving. I love the process of transforming complex challenges into elegant, user-friendly solutions. There's nothing more rewarding than seeing people interact with and benefit from the technology I've helped create.
-            </p>
-            <p className="mb-6">
-              My approach combines technical expertise with a deep understanding of user needs, ensuring that every project not only looks beautiful but also serves its purpose effectively.
-            </p>
-            <p>
-              When I'm not coding, you can find me exploring new design trends, experimenting with creative projects, and staying curious about emerging technologies.
-            </p>
-          </div>
+          {/* Main Content */}
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Text Content */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-semibold text-white">
+                  Frontend Developer & UI/UX Designer
+                </h2>
 
-          <div className="flex flex-col gap-4">
-            <div className="w-64 h-64 relative rounded-lg overflow-hidden shadow-lg animate-slide-in-delay-200">
-              <Image
-                src={getImagePath("/images/profile.JPG")}
-                alt="Sofie Buur"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div className="w-32 h-32 relative rounded-lg overflow-hidden shadow-lg animate-slide-in-delay-300">
-                <Image
-                  src="/images/working.jpg"
-                  alt="Working on projects"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                />
+                <p className="text-lg text-gray-300 leading-relaxed">
+                  I'm Sofie, a passionate frontend developer focused on creating
+                  meaningful digital experiences that combine beautiful design
+                  with intuitive functionality.
+                </p>
+
+                <p className="text-gray-400 leading-relaxed">
+                  My expertise lies in React, TypeScript, and modern web
+                  technologies. I believe in writing clean, maintainable code
+                  and crafting user interfaces that not only look great but
+                  solve real problems.
+                </p>
               </div>
-              <div className="w-32 h-32 relative rounded-lg overflow-hidden shadow-lg animate-slide-in-delay-400">
-                <Image
-                  src="/images/creative.jpg"
-                  alt="Creative process"
-                  fill
-                  className="object-cover hover:scale-105 transition-transform duration-300"
-                />
+
+              {/* Skills Section */}
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-white">What I do</h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="dark-container">
+                    <h4 className="font-medium text-white mb-2">
+                      Frontend Development
+                    </h4>
+                    <p className="text-sm text-gray-400">
+                      React, TypeScript, Next.js
+                    </p>
+                  </div>
+                  <div className="dark-container">
+                    <h4 className="font-medium text-white mb-2">
+                      UI/UX Design
+                    </h4>
+                    <p className="text-sm text-gray-400">
+                      User-centered design, prototyping
+                    </p>
+                  </div>
+                  <div className="dark-container">
+                    <h4 className="font-medium text-white mb-2">
+                      Modern Tools
+                    </h4>
+                    <p className="text-sm text-gray-400">
+                      TailwindCSS, Figma, Git
+                    </p>
+                  </div>
+                  <div className="dark-container">
+                    <h4 className="font-medium text-white mb-2">
+                      Problem Solving
+                    </h4>
+                    <p className="text-sm text-gray-400">
+                      Clean code, best practices
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Image Section */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative group">
+                <div className="relative w-80 h-80 rounded-2xl overflow-hidden border border-gray-700/50">
+                  <Image
+                    src={getImagePath("/images/profile.JPG")}
+                    alt="Sofie Buur - Frontend Developer"
+                    fill
+                    className="object-cover transition-transform duration-500"
+                    priority
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="w-full border-t border-gray-200 my-8"></div>
+          {/* Tech Stack Breakdown */}
+          <div className="mt-20">
+            <h3 className="text-2xl font-semibold text-white mb-8 text-center">
+              My Tech Stack
+            </h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* UI/UX Design */}
+              <div className="flex items-start space-x-4 p-6 bg-gray-800/30 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-colors">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg shadow-lg flex items-center justify-center">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zM21 5a2 2 0 00-2-2h-4a2 2 0 00-2 2v12a4 4 0 004 4h4a2 2 0 002-2V5z"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-2">
+                    UI/UX Design
+                  </h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    User interface design, Figma prototyping, usability testing,
+                    and user-centered design principles.
+                  </p>
+                </div>
+              </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center animate-slide-in-delay-500">
-          <div className="p-6 rounded-lg bg-gray-50">
-            <h3 className="font-semibold mb-2">Problem Solver</h3>
-            <p className="text-gray-600">Turning complex challenges into elegant solutions</p>
+              {/* Frontend Development */}
+              <div className="flex items-start space-x-4 p-6 bg-gray-800/30 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-colors">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-lg shadow-lg flex items-center justify-center">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-2">
+                    Frontend Development
+                  </h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    React, Angular, TypeScript, JavaScript, and TailwindCSS for
+                    modern web applications.
+                  </p>
+                </div>
+              </div>
+
+              {/* Backend Development */}
+              <div className="flex items-start space-x-4 p-6 bg-gray-800/30 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-colors">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg shadow-lg flex items-center justify-center">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-2">
+                    Backend Development
+                  </h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    Java and C# for server-side development, APIs, and
+                    enterprise applications.
+                  </p>
+                </div>
+              </div>
+
+              {/* Database & Data */}
+              <div className="flex items-start space-x-4 p-6 bg-gray-800/30 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-colors">
+                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg shadow-lg flex items-center justify-center">
+                  <svg
+                    className="w-6 h-6 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
+                    />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-white mb-2">
+                    Database & Data
+                  </h4>
+                  <p className="text-sm text-gray-400 leading-relaxed">
+                    SQL database design, data modeling, and data management for
+                    scalable applications.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="p-6 rounded-lg bg-gray-50">
-            <h3 className="font-semibold mb-2">User-Focused</h3>
-            <p className="text-gray-600">Creating experiences that people love to use</p>
-          </div>
-          <div className="p-6 rounded-lg bg-gray-50">
-            <h3 className="font-semibold mb-2">Creative Mind</h3>
-            <p className="text-gray-600">Blending aesthetics with functionality</p>
+
+          {/* Bottom Section */}
+          <div className="mt-20 text-center">
+            <div className="max-w-2xl mx-auto">
+              <p className="text-gray-400 text-lg leading-relaxed">
+                I'm always exploring new technologies and design trends to stay
+                at the forefront of web development. When I'm not coding, you'll
+                find me experimenting with creative projects and staying curious
+                about emerging technologies.
+              </p>
+            </div>
           </div>
         </div>
       </main>

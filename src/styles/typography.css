@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+.project-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+
+}
+
+.project-subtitle {
+  font-size: 1.125rem;
+  color: #ababab;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slide-in 0.5s ease forwards;
+  animation-delay: 0.05s;
+}
+
+.project-description {
+  font-size: 0.875rem;
+  color: #737373;
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+  animation: slide-in 0.5s ease forwards;
+  animation-delay: 0.05s;
+}

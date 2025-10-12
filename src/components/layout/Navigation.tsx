@@ -3,11 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState, useEffect } from "react";
 import { getImagePath } from "@/lib/utils";
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   const pathname = usePathname();
-  const isActive = pathname === href;
+  const isActive = pathname.replace(/\/$/, '') === href.replace(/\/$/, '');
+  console.log("pathname", isActive )
   
   return (
     <Link 
@@ -20,10 +22,37 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
 }
 
 export default function Navigation() {
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <header className="w-full flex flex-col items-center gap-4 py-8">
+    <header 
+      className={`w-full flex flex-col items-center gap-4 py-8 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-transform duration-300 ${
+        isVisible ? 'translate-y-0' : '-translate-y-full'
+      }`}
+    >
       <div className="flex items-center gap-3 animate-slide-in">
-        <div className="rounded-full overflow-hidden w-[40px] h-[40px] bg-white">
+        <div className="rounded-xl overflow-hidden w-[40px] h-[40px] bg-white">
           <Image
             className="rounded-full"
             src={getImagePath("/images/logoBlack.png")}

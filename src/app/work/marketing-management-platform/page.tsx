@@ -1,32 +1,52 @@
-'use client';
+"use client";
 
 import Button from "@/components/Button";
+import { ImageBlock } from "@/components/ImageBlock";
+import { ProjectInfo } from "@/components/ProjectInfo";
+import { WorkPageWrapper } from "@/components/layout/WorkPageWrapper";
 
 export default function MarketingManagementPlatform() {
   return (
     <div className="flex flex-col items-center mt-16">
-      <main className="flex flex-col items-center gap-8 px-4 md:px-8 w-full max-w-7xl">
-        <h1 className="text-4xl font-bold animate-slide-in">Marketing CRM Platform</h1>
-        
-        <div className="w-full">
-          <div className="prose prose-invert max-w-none">
-            <p className="text-lg text-gray-300 mb-8 text-center max-w-2xl mx-auto animate-slide-in-delay-50">
-              Custom made CRM for fintechs to manage their marketing strategies.
-            </p>
-            
-            
+      <main>
+        <WorkPageWrapper
+          title="Marketing CRM Platform"
+          subtitle="Custom made SaaS CRM for fintechs to manage marketing strategies."
+          description="Designed and developed independently."
+        >
+          <div className="w-full">
+            {/* Project Information Grid */}
+            <ProjectInfo
+              year="2024"
+              company="Valyrion"
+              companyUrl="https://valyrion.com"
+              tech="ReactTS, TailwindCSS"
+              status="Live"
+            />
+
+            <div className="gallery">
+              <ImageBlock
+                src="/images/work/ValyrionPlatform/mmp-dashboard.png"
+                alt="Marketing Management Platform"
+              />
+
+              <ImageBlock
+                src="/images/work/ValyrionPlatform/ValyrionPlatform_Thumbnail.png"
+                alt="Marketing Management Platform"
+              />
+            </div>
+
+            <div className="flex gap-4 my-10">
+              <Button
+                type="primary"
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+              >
+                Back to top
+              </Button>
+            </div>
           </div>
-        </div>
-        
-        <div className="flex gap-4 my-10">
-          <Button
-            type="primary"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            Back to top
-          </Button>
-        </div>
+        </WorkPageWrapper>
       </main>
     </div>
   );
-} 
+}
