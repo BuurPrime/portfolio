@@ -4,6 +4,7 @@ import Button from "@/components/Button";
 import { ImageBlock } from "@/components/ImageBlock";
 import { ProjectInfo } from "@/components/ProjectInfo";
 import { WorkPageWrapper } from "@/components/layout/WorkPageWrapper";
+import ProjectFooter from "@/components/layout/ProjectFooter";
 
 export default function MarketingManagementPlatform() {
   return (
@@ -11,40 +12,45 @@ export default function MarketingManagementPlatform() {
       <main>
         <WorkPageWrapper
           title="Marketing CRM Platform"
-          subtitle="Custom made SaaS CRM for fintechs to manage marketing strategies."
-          description="Designed and developed independently."
+          subtitle="Custom made SaaS CRM for fintechs to manage marketing strategies"
+          description="Designed and developed independently"
         >
+          {/* Project Information Grid */}
+          <ProjectInfo
+            year="2025"
+            company="Valyrion"
+            companyUrl="https://valyrion.com"
+            tech="React, TypeScript, TailwindCSS"
+            status="Live"
+          />
+
+          {/* Project Overview */}
           <div className="w-full">
-            {/* Project Information Grid */}
-            <ProjectInfo
-              year="2024"
-              company="Valyrion"
-              companyUrl="https://valyrion.com"
-              tech="ReactTS, TailwindCSS"
-              status="Live"
-            />
-
-            <div className="gallery">
-              <ImageBlock
-                src="/images/work/ValyrionPlatform/mmp-dashboard.png"
-                alt="Marketing Management Platform"
-              />
-
-              <ImageBlock
-                src="/images/work/ValyrionPlatform/ValyrionPlatform_Thumbnail.png"
-                alt="Marketing Management Platform"
-              />
-            </div>
-
-            <div className="flex gap-4 my-10">
-              <Button
-                type="primary"
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              >
-                Back to top
-              </Button>
+            <div className="space-y-4">
+              <h4 className="">Key Features</h4>
+              <p className="leading-relaxed text-[#b7b7b7] text-sm">Key</p>
             </div>
           </div>
+
+          {/* Project Gallery */}
+            <ImageBlock
+              src="/images/work/ValyrionPlatform/mmp-dashboardMock.png"
+              alt="Marketing Management Platform Overview - Complete platform interface"
+            />
+            
+            <ImageBlock
+              src="/images/work/ValyrionPlatform/mmp-merchantsPage.png"
+              alt="Marketing Management Platform Dashboard - Main interface showing campaign overview and analytics"
+            />
+
+<ImageBlock
+              src="/images/work/ValyrionPlatform/mmp-campaignBuilderMock.png"
+              alt="Marketing Management Platform Dashboard - Main interface showing campaign overview and analytics"
+            />
+
+            
+
+          <ProjectFooter />
         </WorkPageWrapper>
       </main>
     </div>

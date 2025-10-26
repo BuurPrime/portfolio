@@ -8,8 +8,12 @@ import { getImagePath } from "@/lib/utils";
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   const pathname = usePathname();
-  const isActive = pathname.replace(/\/$/, '') === href.replace(/\/$/, '');
-  console.log("pathname", isActive )
+
+  const normalizedPathname = pathname.replace(/\/$/, '');
+  const normalizedHref = href.replace(/\/$/, '');
+  const isActive = normalizedHref === '/' 
+    ? normalizedPathname === normalizedHref
+    : normalizedPathname.startsWith(normalizedHref);
   
   return (
     <Link 

@@ -5,7 +5,7 @@ export default function MerchantDashboard() {
   return (
     <div className="flex flex-col items-center mt-16">
       <main>
-        <h1 className="text-4xl font-bold animate-slide-in">
+        <h1 className="animate-slide-in">
           Merchant Dashboard
         </h1>
 

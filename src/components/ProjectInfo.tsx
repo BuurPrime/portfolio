@@ -11,7 +11,7 @@ interface ProjectInfoProps{
 
 export const ProjectInfo: React.FC<ProjectInfoProps> = ({ year, company, companyUrl,  tech, status}) => {
   return (
-    <div className="w-full border-t border-b border-neutral-900 my-8 p-4">
+    <div className="w-full border-t border-b border-neutral-900 mt-8 p-4">
       <div className="flex justify-between">
         <div className="flex flex-col">
           <span className="text-xs font-medium text-neutral-500 uppercase tracking-wide">
@@ -22,7 +22,7 @@ export const ProjectInfo: React.FC<ProjectInfoProps> = ({ year, company, company
 
         <div className="flex flex-col">
           <span className="text-xs font-medium text-neutral-500 uppercase tracking-wide">
-            Company
+            CUSTOMER
           </span>
           <span className="flex text-sm font-medium">
             <a href={companyUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">

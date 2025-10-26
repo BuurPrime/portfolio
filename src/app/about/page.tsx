@@ -1,26 +1,26 @@
 import Image from "next/image";
 import { getImagePath } from "@/lib/utils";
 
+/* ************* ABOUT PAGE ************* */
+
 export default function About() {
   return (
-    <div className="min-h-screen">
+    <div className="flex flex-col items-center mt-16 min-h-screen">
       <main>
         <div className="container mx-auto px-6 py-16 max-w-6xl">
-          <h1 className="text-4xl font-bold animate-slide-in">About Me</h1>
 
           {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+
             {/* Text Content */}
             <div className="space-y-8">
               <div className="space-y-6">
                 <h2 className="text-3xl font-semibold text-white">
-                  Frontend Developer & UI/UX Designer
+                  Hi there,
                 </h2>
 
                 <p className="text-lg text-gray-300 leading-relaxed">
-                  I'm Sofie, a passionate frontend developer focused on creating
-                  meaningful digital experiences that combine beautiful design
-                  with intuitive functionality.
+                  I'm Sofie - a frontend developer and UI/UX designer.
                 </p>
 
                 <p className="text-gray-400 leading-relaxed">

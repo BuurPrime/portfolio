@@ -1,9 +1,29 @@
 @import "tailwindcss";
 
+h1 {
+ font-size: 2.25rem;
+ font-weight: bold;
+}
+
+h2 {
+ font-size: 2rem;
+ font-weight: bold;
+}
+
+
+h3 {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 1.2rem;
+  font-weight: semibold;
+}
+
 .project-title {
   font-size: 2.25rem;
   font-weight: bold;
-
 }
 
 .project-subtitle {

@@ -30,7 +30,27 @@ main {
   align-items: center;
   gap: 12px;
   padding: 0 1rem;
-  width: 70%;
+  width: 90%;
+}
+
+@media (min-width: 768px) {
+  main {
+    width: 80%;
+  }
+}
+
+/* Large screens (laptops, ≥1024px) */
+@media (min-width: 1024px) {
+  main {
+    width: 70%;
+  }
+}
+
+/* Extra-large screens (desktops, ≥1280px) */
+@media (min-width: 1280px) {
+  main {
+    width: 50%;
+  }
 }
 
 /* Gallery */

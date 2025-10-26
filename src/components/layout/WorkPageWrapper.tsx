@@ -27,7 +27,7 @@ export const WorkPageWrapper: React.FC<WorkPageWrapperProps> = ({
       </div>
 
       {/* work/project content */}
-      <div>{children}</div>
+      <div className="flex flex-col gap-12 items-center">{children}</div>
     </div>
   );
 };

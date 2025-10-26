@@ -2,10 +2,10 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <div className="flex flex-col items-center space-y-2 text-neutral-700 text-xs border-t border-neutral-900 w-full p-12">
+    <div className="flex flex-col items-center space-y-2 text-neutral-600 text-xs border-t border-neutral-900 w-full p-12">
       <div className="flex space-x-4">
         <a
-          className="hover:text-neutral-500"
+          className="hover:text-neutral-500 "
           href="https://www.linkedin.com/in/sofie-buur-frontend-developer-uiux-designer/"
           target="_blank"
           rel="noopener noreferrer"
@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
           Notion Creator
         </a>
         <a
-          className="hover:text-neutral-500"
+          className="hover:text-neutral-500 "
           href="/SofieBuur_CV2025_EN.pdf"
           download="SofieBuur_CV2025_EN.pdf"
           target="_blank"

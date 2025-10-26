@@ -46,13 +46,14 @@ export const ImageBlock: React.FC<ImageBlockProps> = ({ src, alt }) => {
       <button
         type="button"
         onClick={openLightbox}
-        className="group relative flex items-center justify-center rounded-lg overflow-hidden w-[700px] h-[400px]"
+        className="group rounded-lg overflow-hidden w-full h-auto block"
       >
         <Image
           src={image}
           alt={alt}
-          fill
-          className="object-cover transition-transform duration-300 cursor-zoom-in"
+          width={700}
+          height={0}
+          className="w-full h-auto transition-transform duration-300 cursor-zoom-in"
           sizes="700px"
         />
       </button>
