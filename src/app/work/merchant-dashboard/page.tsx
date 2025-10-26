@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { getImagePath } from "@/lib/utils";
+/* import Image from "next/image";
+import { getImagePath } from "@/lib/utils"; */
 
 export default function MerchantDashboard() {
   return (
