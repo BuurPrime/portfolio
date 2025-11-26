@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
         </a>
         <a
           className="hover:text-neutral-500 "
-          href="/SofieBuur_CV2025_EN.pdf"
+          href="./SofieBuur_CV2025_EN.pdf"
           download="SofieBuur_CV2025_EN.pdf"
           target="_blank"
           rel="noopener noreferrer"
