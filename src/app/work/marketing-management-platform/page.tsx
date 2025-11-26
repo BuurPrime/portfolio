@@ -1,6 +1,5 @@
 "use client";
 
-import Button from "@/components/Button";
 import { ImageBlock } from "@/components/ImageBlock";
 import { ProjectInfo } from "@/components/ProjectInfo";
 import { WorkPageWrapper } from "@/components/layout/WorkPageWrapper";
