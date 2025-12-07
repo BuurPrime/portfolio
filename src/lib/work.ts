@@ -10,7 +10,7 @@ const work = [
     title: "ViaAds Merchant Dashboard",
     description:
       "Made for a webshop to see and analyze the results of their paid marketing efforts.",
-    image: "/images/work/MerchantDashboard/MerchantDashboard_Thumbnail.png",
+    image: "/images/work/MerchantDashboard/md-thumbnail.png",
     url: "/work/merchant-dashboard",
   },
   {
