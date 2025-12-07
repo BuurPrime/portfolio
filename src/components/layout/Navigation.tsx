@@ -65,13 +65,13 @@ export default function Navigation() {
             height={100}
           />
         </div>
-        <p className="text-md text-white font-sans"> Sofie Buur </p>
+        <p className="text-md font-semibold text-white"> Sofie Buur </p>
       </div>
       <div className="animate-slide-in-delay-50">
-        <nav className="flex gap-8 font-sans text-sm">
+        <nav className="flex gap-8 text-sm">
           <NavLink href="/work">Work</NavLink>
           <NavLink href="/projects">Projects</NavLink>
-          <NavLink href="/about">About</NavLink>
+          {/* <NavLink href="/about">About</NavLink> */}
           <NavLink href="/contact">Contact</NavLink>
         </nav>
       </div>
