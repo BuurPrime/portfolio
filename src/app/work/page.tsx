@@ -8,7 +8,7 @@ const Work: React.FC = () => {
   return (
     <div className="flex flex-col items-center mt-16">
       <main>
-        <h1 className="text-4xl font-bold animate-slide-in">My Work</h1>
+        <h1 className="text-4xl font-bold animate-slide-in">Work</h1>
         <div className="w-full">
           <h4 className="text-lg text-gray-300 mb-12 text-center max-w-2xl mx-auto animate-slide-in-delay-50">
             Stuff I've worked on professionally.

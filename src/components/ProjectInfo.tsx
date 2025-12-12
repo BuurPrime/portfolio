@@ -12,7 +12,7 @@ interface ProjectInfoProps{
 export const ProjectInfo: React.FC<ProjectInfoProps> = ({ year, company, companyUrl,  tech, status}) => {
   return (
     <div className="w-full border-t border-b border-neutral-900 mt-8 p-4">
-      <div className="grid grid-cols-2 gap-y-6 md:grid-cols-4 md:gap-4">
+      <div className="grid grid-cols-2 gap-y-6 md:flex md:justify-between max-w-5xl mx-auto">
         <div className="flex flex-col">
           <span className="text-xs font-medium text-neutral-500 uppercase tracking-wide">
             Year
@@ -44,7 +44,7 @@ export const ProjectInfo: React.FC<ProjectInfoProps> = ({ year, company, company
             Status
           </span>
           <div className="flex items-center gap-1">
-            <div className={`h-2 w-2 rounded-full ${status === 'Live' ? 'bg-green-500' : 'bg-white'}`}></div>
+            <div className={`h-2 w-2 rounded-full ${status === 'Live' ? 'bg-green-500 mr-1' : 'bg-white'}`}></div>
             <span className="text-sm font-medium">{status}</span>
           </div>
         </div>

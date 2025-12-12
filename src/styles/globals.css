@@ -33,6 +33,8 @@ main {
   gap: 12px;
   padding: 0 1rem;
   width: 90%;
+  max-width: 1000px;
+  margin-inline: auto;
 }
 
 @media (min-width: 768px) {
@@ -51,11 +53,17 @@ main {
 /* Extra-large screens (desktops, ≥1280px) */
 @media (min-width: 1280px) {
   main {
+    width: 60%;
+  }
+}
+
+/* Ultra-wide screens (≥1400px) */
+@media (min-width: 1700px) {
+  main {
     width: 50%;
   }
 }
 
-/* Gallery */
 
 .gallery {
   display: flex;

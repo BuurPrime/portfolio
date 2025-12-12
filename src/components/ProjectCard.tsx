@@ -14,7 +14,7 @@ interface ProjectCardProps {
 export default function ProjectCard({ title, image, url, className, style }: ProjectCardProps) {
   return (
     <Link href={url} className={`animate-slide-in-delay-100 flex items-center justify-center ${className}`} style={style}>
-      <div className="w-[80%] rounded-lg overflow-hidden transition-all duration-300">
+      <div className="rounded-lg overflow-hidden transition-all duration-300">
         <Image
           src={getImagePath(image)}
           alt={title}

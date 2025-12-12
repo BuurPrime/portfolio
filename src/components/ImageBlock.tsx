@@ -3,6 +3,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import { getImagePath } from "@/lib/utils";
+import { X } from "lucide-react";
 
 interface ImageBlockProps {
   src: string;
@@ -53,7 +54,7 @@ export const ImageBlock: React.FC<ImageBlockProps> = ({ src, alt }) => {
           alt={alt}
           width={700}
           height={0}
-          className="w-full h-auto transition-transform duration-300 cursor-zoom-in"
+          className="w-full h-auto transition-transform duration-300 cursor-zoom-in outline-none"
           sizes="700px"
         />
       </button>
@@ -67,9 +68,17 @@ export const ImageBlock: React.FC<ImageBlockProps> = ({ src, alt }) => {
               visible ? "opacity-100" : "opacity-0"
             }`}
         >
+          {/* Close Button */}
+          <button
+            onClick={close}
+            className="absolute top-5 right-5 z-[1010] p-2 text-white/70 hover:text-white transition-colors rounded-full hover:bg-white/10 border border-neutral-900"
+            aria-label="Close lightbox"
+          >
+            <X className="w-6 h-6" />
+          </button>
+
           <div
-            onClick={(e) => e.stopPropagation()}
-            className={`relative w-full max-w-5xl h-[80vh] transform transition-all duration-300 ${
+            className={`relative w-[95vw] h-[95vh] transform transition-all duration-300 ${
               visible ? "scale-100 opacity-100" : "scale-95 opacity-0"
             }`}
           >
@@ -78,7 +87,7 @@ export const ImageBlock: React.FC<ImageBlockProps> = ({ src, alt }) => {
               alt={alt}
               fill
               className="object-contain cursor-zoom-out"
-              sizes="(max-width: 1024px) 100vw, 1024px"
+              sizes="95vw"
             />
           </div>
         </div>
