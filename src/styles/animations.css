@@ -10,6 +10,13 @@
   }
 }
 
+@keyframes ping-slow {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
 /* Animation utility classes */
 .animate-slide-in {
   animation: slideInUp 0.4s ease forwards;
@@ -34,4 +41,8 @@
 .animate-slide-in-delay-200 {
   animation: slideInUp 0.4s ease 0.2s forwards;
   opacity: 0;
+}
+
+.animate-ping-slow {
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }

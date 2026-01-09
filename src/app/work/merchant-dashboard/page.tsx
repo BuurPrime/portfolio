@@ -1,26 +1,27 @@
-/* import Image from "next/image";
-import { getImagePath } from "@/lib/utils"; */
+import React from "react";
+import { WorkPageWrapper } from "@/components/layout/WorkPageWrapper";
+import { ProjectInfo } from "@/components/ProjectInfo";
 
-export default function MerchantDashboard() {
+export const MerchantDashboard: React.FC = () => {
   return (
     <div className="flex flex-col items-center mt-16">
       <main>
-        <h1 className="animate-slide-in">
-          Merchant Dashboard
-        </h1>
-
-        <div className="w-full">
-          <div>
-            <p className="project-title">
-              For webshops to track metrics for marketing performance.
-            </p>
-
-            <p className="project-subtitle">
-              Designed and developed independently by me.
-            </p>
-          </div>
-        </div>
+        <WorkPageWrapper
+          title="Merchant Dashboard"
+          subtitle="For webshops to see and analyze the results of their paid marketing efforts"
+          description="Designed and developed independently by me"
+        >
+          <ProjectInfo
+            year="2025"
+            company="Valyrion"
+            companyUrl="https://valyrion.com"
+            tech="React TS, TailwindCSS"
+            status="Live"
+          />
+        </WorkPageWrapper>
       </main>
     </div>
   );
 }
+
+export default MerchantDashboard;

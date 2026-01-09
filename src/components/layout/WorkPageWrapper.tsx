@@ -3,7 +3,7 @@
 import React from "react";
 
 interface WorkPageWrapperProps {
-  title: string;
+  title: React.ReactNode;
   subtitle: string;
   description: string;
   children: React.ReactNode;
@@ -19,7 +19,7 @@ export const WorkPageWrapper: React.FC<WorkPageWrapperProps> = ({
     <div className="w-full">
       {/* work/project info */}
       <div className="w-full flex flex-col items-center gap-3">
-        <h1 className="project-title animate-slide-in-delay-50">{title}</h1>
+        <h1 className="project-title animate-slide-in-delay-50 whitespace-pre-wrap">{title}</h1>
         <div>
           <p className="project-subtitle">{subtitle}</p>
           <p className="project-description">{description}</p>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import { getImagePath } from "@/lib/utils";
+import { useRouter } from "next/navigation";
 
 function NavLink({ href, children }: { href: string; children: React.ReactNode }) {
   const pathname = usePathname();
@@ -28,6 +29,7 @@ function NavLink({ href, children }: { href: string; children: React.ReactNode }
 export default function Navigation() {
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -55,7 +57,7 @@ export default function Navigation() {
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
-      <div className="flex items-center gap-3 animate-slide-in">
+      <div className="flex items-center gap-3 animate-slide-in cursor-pointer" onClick={() => router.push('/')}>
         <div className="rounded-xl overflow-hidden w-[40px] h-[40px] bg-white">
           <Image
             className="rounded-full"
