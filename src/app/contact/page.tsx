@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { BadgeCheck, ArrowUpRight, Linkedin, Dribbble } from "lucide-react";
+import { getImagePath } from "@/lib/utils";
 
 
 export default function Contact() {
@@ -33,7 +34,7 @@ export default function Contact() {
         {/* Avatar */}
         <div className="relative w-26 h-26">
           <Image
-            src="/images/profile.JPG"
+            src={getImagePath("/images/profile.JPG")}
             alt="Sofie Buur"
             width={80}
             height={80}
@@ -125,7 +126,7 @@ export default function Contact() {
               url: "https://www.notion.com/@prettyproductivity",
               icon: (
                 <Image 
-                  src="/images/notion.svg" 
+                  src={getImagePath("/images/notion.svg")}
                   alt="Notion" 
                   width={16} 
                   height={16} 
