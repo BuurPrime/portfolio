@@ -20,6 +20,13 @@ const work = [
     image: "/images/work/ViaShopping/ViaShopping_Thumbnail.png",
     url: "/work/viashopping",
   },
+  {
+    title: "Espresso Tools",
+    description:
+      "Visual identity for a danish webshop selling espresso tools",
+    image: "/images/work/EspressoTools/EspressoTools_Thumbnail.png",
+    url: "/work/espresso-tools",
+  }
 ];
 
 export default work;

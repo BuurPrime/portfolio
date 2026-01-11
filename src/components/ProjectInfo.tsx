@@ -8,7 +8,7 @@ interface ProjectInfoProps {
   link?: string;
   linkUrl?: string;
   tech: string;
-  status: string;
+  status?: string;
 }
 
 export const ProjectInfo: React.FC<ProjectInfoProps> = ({
@@ -79,6 +79,7 @@ export const ProjectInfo: React.FC<ProjectInfoProps> = ({
           <span className="text-sm font-medium">{tech}</span>
         </div>
 
+        {status && (
         <div className="flex flex-col">
           <span className="text-xs font-medium text-neutral-500 uppercase tracking-wide">
             Status
@@ -93,8 +94,9 @@ export const ProjectInfo: React.FC<ProjectInfoProps> = ({
               <div className="h-2 w-2 rounded-full bg-white"></div>
             )}
             <span className="text-sm font-medium">{status}</span>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
