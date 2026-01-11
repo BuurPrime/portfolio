@@ -2,7 +2,7 @@ import React from "react";
 import { WorkPageWrapper } from "@/components/layout/WorkPageWrapper";
 import { ProjectInfo } from "@/components/ProjectInfo";
 
-export const TextAdventureGame: React.FC = () => {
+const TextAdventureGame: React.FC = () => {
   return (
     <div className="flex flex-col items-center mt-16">
       <main>

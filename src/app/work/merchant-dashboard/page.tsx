@@ -2,7 +2,7 @@ import React from "react";
 import { WorkPageWrapper } from "@/components/layout/WorkPageWrapper";
 import { ProjectInfo } from "@/components/ProjectInfo";
 
-export const MerchantDashboard: React.FC = () => {
+const MerchantDashboard: React.FC = () => {
   return (
     <div className="flex flex-col items-center mt-16">
       <main>
