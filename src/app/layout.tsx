@@ -28,6 +28,3 @@ export default function RootLayout({
     </html>
   );
 }
-
-/* style={{ scrollbarGutter: 'stable' }}
- */
